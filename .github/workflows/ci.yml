@@ -79,7 +79,7 @@ jobs:
         uses: docker/build-push-action@v6.18.0
         with:
           context: .
-          file: Dockerfile.prod.${{ matrix.service }}
+          file: Dockerfile
           tags: ${{ steps.docker_meta.outputs.tags }}, ashirt/ocr-worker:latest #Add latest tag for main
           labels: ${{ steps.docker_meta.outputs.labels }}
           push: true
