@@ -3,7 +3,7 @@ FROM golang:1.25-alpine AS build
 RUN mkdir app
 COPY . ./app/
 WORKDIR /go/app
-RUN go build -v ./...
+RUN go build -v ./cmd/...
 
 FROM alpine:latest
 
