@@ -7,7 +7,7 @@ RUN go build -v ./cmd/...
 
 FROM alpine:latest
 
-RUN apk add --no-cache tesseract-ocr && \
+RUN apk add --no-cache tesseract-ocr tesseract-ocr-data-eng && \
     adduser -h /home/ashirt -S -D ashirt
 
 USER ashirt
