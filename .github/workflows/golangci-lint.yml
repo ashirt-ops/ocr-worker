@@ -21,7 +21,7 @@ jobs:
           go-version: stable
 
       - name: Install packages
-        run: sudo apt install -y tesseract-ocr-dev tesseract-ocr-eng
+        run: sudo apt install -y libtesseract-dev tesseract-ocr-eng
 
       - name: golangci-lint
         uses: golangci/golangci-lint-action@v9
