@@ -1,13 +1,16 @@
 FROM golang:1.25-alpine AS build
 
-RUN mkdir app
+RUN mkdir app && \
+    apk add --no-cache build-base leptonica-dev tesseract-ocr-dev
+
 COPY . ./app/
 WORKDIR /go/app
+
 RUN go build -v ./cmd/...
 
 FROM alpine:latest
 
-RUN apk add --no-cache tesseract-ocr tesseract-ocr-dev tesseract-ocr-data-eng && \
+RUN apk add --no-cache tesseract-ocr tesseract-ocr-data-eng && \
     adduser -h /home/ashirt -S -D ashirt
 
 USER ashirt
