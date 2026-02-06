@@ -1,7 +1,7 @@
 FROM golang:1.25-alpine AS build
 
 RUN mkdir app && \
-    apk add --no-cache build-base leptonica-dev tesseract-ocr-dev
+    apk add --no-cache build-base tesseract-ocr-dev
 
 COPY . ./app/
 WORKDIR /go/app
