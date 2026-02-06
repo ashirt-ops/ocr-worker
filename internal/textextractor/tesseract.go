@@ -1,7 +1,7 @@
 package textextractor
 
 import (
-	"github.com/otiai10/gosseract"
+	"github.com/otiai10/gosseract/v2"
 )
 
 type Tesseract struct{}
@@ -20,14 +20,7 @@ func (t *Tesseract) ExtractText(img []byte) (string, error) {
 		_ = client.Close()
 	}()
 
-	// NOTE: For some reason this segfaults without calling SetLanguage even though the
-	// docs say "eng" should be the default
-	err := client.SetLanguage("eng")
-	if err != nil {
-		return "", err
-	}
-
-	err = client.SetImageFromBytes(img)
+	err := client.SetImageFromBytes(img)
 	if err != nil {
 		return "", err
 	}
