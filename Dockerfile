@@ -10,7 +10,7 @@ RUN go build -v ./cmd/...
 
 FROM alpine:latest
 
-RUN apk add --no-cache tesseract-ocr tesseract-ocr-data-eng && \
+RUN apk add --no-cache tzdata tesseract-ocr tesseract-ocr-data-eng && \
     adduser -h /home/ashirt -S -D ashirt
 
 USER ashirt
@@ -18,4 +18,4 @@ WORKDIR /home/ashirt
 
 COPY --from=build /go/app/ocr-worker /home/ashirt/ocr-worker
 
-CMD ["ocr-worker"]
+CMD ["/home/ashirt/ocr-worker"]

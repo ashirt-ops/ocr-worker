@@ -1,7 +1,8 @@
 package messages
 
 type Request struct {
-	ContentType   string `json:"content_type"`
-	EvidenceUUID  string `json:"evidence_uuid"`
-	OperationSlug string `json:"operation_slug"`
+	ContentType   string `json:"contentType"`
+	EvidenceUUID  string `json:"evidenceUuid"`
+	OperationSlug string `json:"operationSlug"`
+	Type          string `json:"type"`
 }

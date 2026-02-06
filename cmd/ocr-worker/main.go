@@ -17,10 +17,11 @@ func main() {
 
 	handler = rlog.RequestIDHandler{Handler: handler}
 	logger := slog.New(handler)
+	slog.SetDefault(logger)
 
 	extractor := textextractor.NewTesseract()
 
-	env := handlers.New(extractor)
+	env := handlers.New(extractor, "", "", []byte{})
 	mux := env.Routes()
 
 	mux.Use(middleware.RequestID)
