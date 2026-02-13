@@ -13,12 +13,8 @@ func NewTesseract() TextExtractor {
 
 func (t *Tesseract) ExtractText(img []byte) (string, error) {
 	client := gosseract.NewClient()
-	defer func() {
-		// TODO: we're doing this because golangci-lint complains about an unchecked error
-		// We can either add an exclusion to it's config or used a named return to surface'
-		// this up
-		_ = client.Close()
-	}()
+	//nolint:errcheck
+	defer client.Close()
 
 	err := client.SetImageFromBytes(img)
 	if err != nil {

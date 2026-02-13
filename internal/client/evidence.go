@@ -10,6 +10,7 @@ func (c *Client) GetEvidenceContent(operationSlug, evidenceUUID string) ([]byte,
 	if err != nil {
 		return nil, err
 	}
+	//nolint:errcheck
 	defer response.Body.Close()
 
 	body, err := io.ReadAll(response.Body)
