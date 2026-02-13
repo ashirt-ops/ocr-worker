@@ -4,6 +4,7 @@ go 1.25.6
 
 require (
 	github.com/jrozner/weby v0.1.0
+	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/otiai10/gosseract/v2 v2.4.1
 )
 
