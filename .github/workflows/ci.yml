@@ -16,11 +16,14 @@ jobs:
       - name: Set up Go 1.x
         uses: actions/setup-go@v6
         with:
-          go-version: stable
+          go-version: 1.26
         id: go
 
       - name: Check out code into the Go module directory
         uses: actions/checkout@v6
+
+      - name: Install packages
+        run: sudo apt install -y libtesseract-dev tesseract-ocr-eng
 
       - name: Build
         run: go build -v ./...
