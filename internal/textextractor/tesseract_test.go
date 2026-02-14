@@ -1,6 +1,7 @@
 package textextractor
 
 import (
+	"context"
 	"os"
 	"testing"
 )
@@ -11,7 +12,7 @@ func TestTesseract(t *testing.T) {
 		t.Fatalf("unable to read test data: %v", err)
 	}
 	extractor := NewTesseract()
-	extracted, err := extractor.ExtractText(data)
+	extracted, err := extractor.ExtractText(context.Background(), data)
 	if err != nil {
 		t.Fatalf("unable to extract text: %v", err)
 	}

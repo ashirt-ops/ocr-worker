@@ -71,7 +71,7 @@ func (e *Env) Process(w http.ResponseWriter, r *http.Request) {
 		goto end
 	}
 
-	content, err = e.extractor.ExtractText(data)
+	content, err = e.extractor.ExtractText(r.Context(), data)
 	if err != nil {
 		slog.ErrorContext(r.Context(), "error extracting text", "error", err)
 		status = http.StatusInternalServerError

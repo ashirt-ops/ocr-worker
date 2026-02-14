@@ -48,6 +48,8 @@ func initializeExtractor(conf *config.Config) (textextractor.TextExtractor, erro
 	switch conf.Backend {
 	case "tesseract":
 		return textextractor.NewTesseract(), nil
+	case "gcp":
+		return textextractor.NewGCP(), nil
 	default:
 		return nil, fmt.Errorf("unsupported backend: %s", conf.Backend)
 	}
