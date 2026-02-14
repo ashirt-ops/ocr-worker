@@ -1,6 +1,8 @@
 package textextractor
 
 import (
+	"context"
+
 	"github.com/otiai10/gosseract/v2"
 )
 
@@ -11,7 +13,7 @@ func NewTesseract() TextExtractor {
 	return &Tesseract{}
 }
 
-func (t *Tesseract) ExtractText(img []byte) (string, error) {
+func (t *Tesseract) ExtractText(ctx context.Context, img []byte) (string, error) {
 	client := gosseract.NewClient()
 	//nolint:errcheck
 	defer client.Close()
