@@ -6,12 +6,12 @@ import (
 )
 
 type Config struct {
-	APIBase   string             `envconfig:"api_base" required:"true"`
-	AccessKey string             `envconfig:"access_key" split_case:"true" required:"true"`
-	SecretKey Base64EncodedValue `envconfig:"secret_key" required:"true"`
-	Backend   string             `default:"tesseract"`
-	LogLevel  slog.Level         `envconfig:"log_level" default:"INFO"`
-	Port      int                `default:"8080"`
+	APIBase    string             `envconfig:"api_base" required:"true"`
+	AccessKey  string             `envconfig:"access_key" split_case:"true" required:"true"`
+	SecretKey  Base64EncodedValue `envconfig:"secret_key" required:"true"`
+	Backend    string             `default:"tesseract"`
+	LogLevel   slog.Level         `envconfig:"log_level" default:"INFO"`
+	WorkerPort int                `default:"8080"`
 }
 
 type Base64EncodedValue []byte

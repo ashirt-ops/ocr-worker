@@ -13,7 +13,7 @@ Configuration is managed through environment variables. Below are the recognized
 | SECRET_KEY | ASHIRT secret key              |                          | | yes |
 | BACKEND    | text extraction backend to use | tesseract, gcp, aws      | tesseract | no |
 | LOG_LEVEL  | logging level                  | debug, info, warn, error | info | no |
-| PORT       | the tcp port to bind on        | any valid port           | 8080 | no |
+| WORKER_PORT       | the tcp port to bind on        | any valid port           | 8080 | no |
 
 ## License
 
