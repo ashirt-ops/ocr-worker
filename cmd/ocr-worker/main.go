@@ -40,7 +40,7 @@ func main() {
 	mux.Use(middleware.WrapResponse)
 	mux.Use(middleware.Logger(logger))
 
-	host := fmt.Sprintf(":%d", conf.Port)
+	host := fmt.Sprintf(":%d", conf.WorkerPort)
 	log.Fatal(http.ListenAndServe(host, mux))
 }
 
