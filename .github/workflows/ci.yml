@@ -72,7 +72,7 @@ jobs:
 
       - name: Build and Push PR
         if: github.ref != 'refs/heads/main'
-        uses: docker/build-push-action@v7.2.0
+        uses: docker/build-push-action@v7.3.0
         with:
           context: .
           file: Dockerfile
@@ -82,7 +82,7 @@ jobs:
 
       - name: Build and Push Latest
         if: github.ref == 'refs/heads/main'
-        uses: docker/build-push-action@v7.2.0
+        uses: docker/build-push-action@v7.3.0
         with:
           context: .
           file: Dockerfile
