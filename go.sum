@@ -70,8 +70,8 @@ github.com/googleapis/enterprise-certificate-proxy v0.3.17 h1:73NfMHdiqo9JFU9+7a
 github.com/googleapis/enterprise-certificate-proxy v0.3.17/go.mod h1:rSEsBUemEBZEexP2y6jPp16LUmUbjmSbcPMQizR0o4k=
 github.com/googleapis/gax-go/v2 v2.23.0 h1:Tchl7qkvE7Ip3y+ztvNufYFvkfqTe7NfLTYGIdJRLuE=
 github.com/googleapis/gax-go/v2 v2.23.0/go.mod h1:rBQKOVJCdb8IFEzg+FCwlt1LP/xMDGuqUXhUG+XMXEg=
-github.com/jrozner/weby v0.2.0 h1:1gBcuJCcMxAeovOlNg125CaCBGnQtpDODu84L7M+by8=
-github.com/jrozner/weby v0.2.0/go.mod h1:cBLmTAkOScydeEd02pmDkSeQfdZUQ9Y3r3hcLSUZrqI=
+github.com/jrozner/weby v0.3.0 h1:YIV6QPU8tHH055NZhPh1Kfu7JuooXlZGVtALRKg6Jls=
+github.com/jrozner/weby v0.3.0/go.mod h1:cBLmTAkOScydeEd02pmDkSeQfdZUQ9Y3r3hcLSUZrqI=
 github.com/kelseyhightower/envconfig v1.4.0 h1:Im6hONhd3pLkfDFsbRgu68RDNkGF1r3dvMUtDTo2cv8=
 github.com/kelseyhightower/envconfig v1.4.0/go.mod h1:cccZRl6mQpaq41TPp5QxidR+Sa3axMbJDNb//FQX6Gg=
 github.com/otiai10/gosseract/v2 v2.4.1 h1:G8AyBpXEeSlcq8TI85LH/pM5SXk8Djy2GEXisgyblRw=
