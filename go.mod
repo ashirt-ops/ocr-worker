@@ -6,7 +6,7 @@ require (
 	cloud.google.com/go/vision/v2 v2.15.0
 	github.com/aws/aws-sdk-go-v2/config v1.32.32
 	github.com/aws/aws-sdk-go-v2/service/rekognition v1.54.4
-	github.com/jrozner/weby v0.2.0
+	github.com/jrozner/weby v0.3.0
 	github.com/kelseyhightower/envconfig v1.4.0
 	github.com/otiai10/gosseract/v2 v2.4.1
 )
