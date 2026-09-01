@@ -1,4 +1,4 @@
-FROM golang:1.26-alpine AS build
+FROM golang:1.27-alpine AS build
 
 RUN mkdir app && \
     apk add --no-cache build-base tesseract-ocr-dev
