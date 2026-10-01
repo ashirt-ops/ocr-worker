@@ -1,9 +1,9 @@
 module github.com/ashirt-ops/ocr-worker
 
-go 1.26
+go 1.26.0
 
 require (
-	cloud.google.com/go/vision/v2 v2.15.0
+	cloud.google.com/go/vision/v2 v2.16.0
 	github.com/aws/aws-sdk-go-v2/config v1.32.32
 	github.com/aws/aws-sdk-go-v2/service/rekognition v1.54.4
 	github.com/jrozner/weby v0.2.0
@@ -55,6 +55,6 @@ require (
 	google.golang.org/genproto v0.0.0-20260319201613-d00831a3d3e7 // indirect
 	google.golang.org/genproto/googleapis/api v0.0.0-20260630182238-925bb5da69e7 // indirect
 	google.golang.org/genproto/googleapis/rpc v0.0.0-20260630182238-925bb5da69e7 // indirect
-	google.golang.org/grpc v1.82.1 // indirect
+	google.golang.org/grpc v1.83.1 // indirect
 	google.golang.org/protobuf v1.36.11 // indirect
 )
